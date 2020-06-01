@@ -1,0 +1,15 @@
+title=title
+form(action='/users/create', method='post' enctype="multipart/form-data")
+  label(for='name') Name
+  input#name(type='text' name='name')
+  label(for='email') Email
+  input#name(type='text' name='email')
+  label(for='phone') Phone
+  input#name(type='text' name='phone')
+  label(for='password') Password
+  input#name(type='text' name='password')
+  label(for='address') Address
+  input#name(type='text' name='address')
+  labe(for='avatarUrl') Avatar
+  input#avatarUrl(type="file", name='avatarUrl')
+  button(type="submit") Create
