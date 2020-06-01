@@ -18,6 +18,8 @@ const controllers = require('../controllers/user.controllers');
 
 router.get('/', controllers.index);
 
+router.get('/search', controllers.search);
+
 router.get('/create', controllers.getCreate);
 
 router.post('/create', upload.single('avatarUrl'), controllers.postCreate);
