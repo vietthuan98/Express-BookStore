@@ -1,11 +1,13 @@
-title=title
-h1 day la trang users
-a(href='/users/create') Create a new user
+extends layouts/layout
 
-form(action='/users/search' method='get')
-  input#search-users(type='text' name='q')
-  button(action='submit') Search
-if users
-  each user in users
-    p=user.name
-    p=user.email
+block content
+  h1 day la trang users
+  a(href='/users/create') Create a new user
+
+  form(action='/users/search' method='get')
+    input#search-users(type='text' name='q')
+    button(action='submit') Search
+  if users
+    each user in users
+      p=user.name
+      p=user.email

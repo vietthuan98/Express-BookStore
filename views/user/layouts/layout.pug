@@ -1,0 +1,31 @@
+html
+  head  
+    title=title
+    block scripts
+      meta(charset='utf-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet' href='../../styles/navbar.css')
+      script(src='https://kit.fontawesome.com/a076d05399.js')
+  body
+    block navbar
+      nav
+        input#check(type='checkbox')
+        label.checkbtn(for='check')
+          <i class="fas fa-bars"></i>
+        .logo
+          img(src='../../imgs/logo.jpg' alt='logo-bookstore')
+        ul
+          li
+            a.active(href='/') Home
+          li
+            a(href='/users') Users
+          li
+            a(href='/books') Book
+          li
+            a(href='/contact') Contact  
+          li
+            a(href='/about') About
+          li
+            a Wellcome!
+    block content
+    block footer
