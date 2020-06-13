@@ -1,13 +1,14 @@
-extends layouts/layout
+extends ../layouts/layout
 
 block content
   h1 day la trang users
   a(href='/users/create') Create a new user
 
   form(action='/users/search' method='get')
-    input#search-users(type='text' name='q')
+    input#search-users(type='text' name='q' value= q ? q : '')
     button(action='submit') Search
   if users
     each user in users
       p=user.name
-      p=user.email
+      span
+        a(href='/users/'+ user._id) View

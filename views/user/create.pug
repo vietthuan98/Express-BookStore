@@ -1,15 +1,17 @@
-title=title
-form(action='/users/create', method='post' enctype="multipart/form-data")
-  label(for='name') Name
-  input#name(type='text' name='name')
-  label(for='email') Email
-  input#name(type='text' name='email')
-  label(for='phone') Phone
-  input#name(type='text' name='phone')
-  label(for='password') Password
-  input#name(type='password' name='password')
-  label(for='address') Address
-  input#name(type='text' name='address')
-  labe(for='avatar-url') Avatar
-  input#avatar-url(type="file", name='avatarUrl')
-  button(type="submit") Create
+extends ../layouts/layout
+
+block content
+  form(action='/users/create', method='post' enctype="multipart/form-data")
+    label(for='name') Name
+    input#name(type='text' name='name')
+    label(for='email') Email
+    input#email(type='text' name='email')
+    label(for='phone') Phone
+    input#phone(type='text' name='phone')
+    label(for='password') Password
+    input#password(type='password' name='password')
+    label(for='address') Address
+    input#address(type='text' name='address')
+    labe(for='avatar-url') Avatar
+    input#avatar-url(type="file", name='avatarUrl')
+    button(type="submit") Create

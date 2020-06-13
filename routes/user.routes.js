@@ -18,11 +18,24 @@ const controllers = require('../controllers/user.controllers');
 
 router.get('/', controllers.index);
 
+//router.get('/delete/:userId', controllers.delete);
 router.get('/search', controllers.search);
 
 router.get('/create', controllers.getCreate);
 
 router.post('/create', upload.single('avatarUrl'), controllers.postCreate);
+
+router.get('/edit/:id', controllers.getEdit);
+
+router.post('/edit/:id', upload.single('avatarUrl'), controllers.postEdit);
+
+
+router.get('/:id', controllers.view);
+
+//router.delete('/:userId', controllers.delete);
+
+
+
 
 
 module.exports = router;

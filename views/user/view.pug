@@ -1,0 +1,10 @@
+extends ../layouts/layout
+
+block content
+  if user
+    img(src=`${user.avatarUrl}`, alt='Avatar')
+    p=user.name
+    p=user.email
+    p=user.phone
+    p=user.address
+    a(href='/users/delete/'+user._id) Delete now
